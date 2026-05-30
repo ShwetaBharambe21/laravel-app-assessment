@@ -1,5 +1,5 @@
 resource "aws_lb" "app" {
-  name               = "laravel-alb"
+  name               = "laravel-alb-shweta"
   load_balancer_type = "application"
   internal           = false
 

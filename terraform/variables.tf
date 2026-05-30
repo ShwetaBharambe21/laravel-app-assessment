@@ -1,12 +1,14 @@
 variable "region" {
-  default = "ap-south-1"
+  default = "us-east-1"
 }
 
 variable "instance_type" {
   default = "t3.micro"
 }
 
-variable "vpc_id" {}
+variable "vpc_id" {
+  type = string
+}
 
 variable "public_subnet_1" {}
 
