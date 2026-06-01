@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,13 +22,12 @@ jobs:
       - name: Build Image
         run: |
           docker build \
-            -t ${{ secrets.DOCKER_USER }}/laravel-app:latest \
+            -t shweta779/laravel-app:latest \
             -f docker/php/Dockerfile .
 
       - name: Push Image
         run: |
-          docker push \
-            ${{ secrets.DOCKER_USER }}/laravel-app:latest
+          docker push shweta779/laravel-app:latest
 
       - name: Deploy
         uses: appleboy/ssh-action@v1.0.3
