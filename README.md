@@ -19,7 +19,6 @@ This repository represents a real-world deployment workflow where application co
 
 # Solution Architecture
 
-```text
 Developer
     │
     ▼
@@ -36,6 +35,7 @@ Docker Container
     │
     ▼
 Laravel Application
+
 =======
 Production-grade Laravel deployment on AWS using Docker, EC2 Auto Scaling Group, Application Load Balancer, GitHub Actions CI/CD, and CloudWatch monitoring.
 
