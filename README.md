@@ -673,17 +673,5 @@ curl localhost
 # Author
 
 ## Shweta Bharambe
-
 DevOps Engineer
 
-GitHub:
-https://github.com/ShwetaBharambe21
-
-LinkedIn:
-[(https://www.linkedin.com/in/shweta-bharambe/)]
-
-=======
-Shweta Bharambe
-
-GitHub:
-https://github.com/ShwetaBharambe21
