@@ -4,7 +4,7 @@ set -e
 
 VERSION=$1
 
-docker pull myrepo/laravel-app:$VERSION
+docker pull shweta779/laravel-app:$TAG
 
 docker stop laravel-app || true
 docker rm laravel-app || true
