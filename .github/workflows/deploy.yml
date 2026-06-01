@@ -1,42 +1,15 @@
-name: Deploy Laravel
-
+name: Deploy to EC2
 on:
   push:
     branches:
       - main
 
-env:
-  IMAGE_NAME: laravel-app
-
 jobs:
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-
       - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Login DockerHub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKER_USER }}
-          password: ${{ secrets.DOCKER_PASS }}
-
-      - name: Build Image
-        run: |
-          docker build \
-          -t $IMAGE_NAME:${{ github.sha }} \
-          -f docker/php/Dockerfile .
-
-      - name: Push Image
-        run: |
-          docker tag $IMAGE_NAME:${{ github.sha }} \
-          ${{ secrets.DOCKER_USER }}/$IMAGE_NAME:${{ github.sha }}
-
-          docker push \
-          ${{ secrets.DOCKER_USER }}/$IMAGE_NAME:${{ github.sha }}
+        uses: actions/checkout@v3
 
       - name: Deploy
         uses: appleboy/ssh-action@v1.0.3
@@ -46,4 +19,11 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             cd /opt/app
+
+            git reset --hard
+            git pull origin main
+
+            chmod +x deployment/deploy.sh
+            chmod +x deployment/rollback.sh
+
             ./deployment/deploy.sh ${{ github.sha }}
