@@ -31,4 +31,8 @@ COPY --from=builder /app .
 RUN chown -R www-data:www-data \
     storage bootstrap/cache
 
-CMD ["php","artisan","serve","--host=0.0.0.0","--port=9000"]
+COPY docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
+
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
