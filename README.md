@@ -698,33 +698,10 @@ curl localhost
 * Right Sized EC2 Instances
 * Docker Layer Caching
 * CloudWatch Log Retention
->>>>>>> 717dc581d9a629a473df26e3380aabf819c4576b
-
----
-
-# Future Improvements
-
-<<<<<<< HEAD
-* Kubernetes deployment
-* AWS EKS integration
-* Monitoring using Prometheus and Grafana
-* Nginx reverse proxy
-* SSL/TLS configuration
-* Blue-Green deployment strategy
-=======
-* Blue/Green Deployments
-* Automated Rollbacks
-* Redis Integration
-* HTTPS with ACM
-* WAF Integration
-* Multi-Region Architecture
->>>>>>> 717dc581d9a629a473df26e3380aabf819c4576b
-
 ---
 
 # Author
 
-<<<<<<< HEAD
 ## Shweta Bharambe
 
 DevOps Engineer
@@ -742,4 +719,3 @@ Shweta Bharambe
 
 GitHub:
 https://github.com/ShwetaBharambe21
->>>>>>> 717dc581d9a629a473df26e3380aabf819c4576b
