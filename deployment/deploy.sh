@@ -2,16 +2,16 @@
 
 set -e
 
-echo "Pulling latest image..."
+echo "Stopping old containers..."
 
-docker pull shweta779/laravel-app:latest
+docker compose down || true
 
-docker stop laravel-app || true
-docker rm laravel-app || true
+echo "Pulling latest code..."
 
-docker run -d \
-  --name laravel-app \
-  -p 9000:9000 \
-  shweta779/laravel-app:latest
+git pull origin main
 
-echo "Deployment Successful"
+echo "Starting application..."
+
+docker compose up -d --build
+
+echo "Deployment successful"
