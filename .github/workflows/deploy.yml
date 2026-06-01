@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,12 +22,13 @@ jobs:
       - name: Build Image
         run: |
           docker build \
-            -t shweta779/laravel-app:latest \
+            -t ${{ secrets.DOCKER_USER }}/laravel-app:latest \
             -f docker/php/Dockerfile .
 
       - name: Push Image
         run: |
-          docker push shweta779/laravel-app:latest
+          docker push \
+            ${{ secrets.DOCKER_USER }}/laravel-app:latest
 
       - name: Deploy
         uses: appleboy/ssh-action@v1.0.3
@@ -36,11 +37,12 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_KEY }}
           script: |
-                cd /opt/app
+            cd /opt/app
 
-                git reset --hard
-                git pull origin main
+            git reset --hard
+            git pull origin main
 
-                chmod +x deployment/deploy.sh
+            chmod +x deployment/deploy.sh
+            chmod +x deployment/rollback.sh
 
-                ./deployment/deploy.sh
+            ./deployment/deploy.sh
