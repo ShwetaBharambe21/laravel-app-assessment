@@ -1,6 +1,5 @@
 # Laravel DevOps Assessment
 
-<<<<<<< HEAD
 ## Project Overview
 
 This project demonstrates the implementation of modern DevOps practices for deploying and managing a Laravel application on AWS.
@@ -156,7 +155,6 @@ Traffic Switch
 
 ---
 
-<<<<<<< HEAD
 # Technologies Used
 
 ## Application Layer
@@ -416,7 +414,6 @@ Benefits:
 # Setup Instructions
 
 ## Clone Repository
->>>>>>> 717dc581d9a629a473df26e3380aabf819c4576b
 
 ```bash
 git clone https://github.com/ShwetaBharambe21/laravel-app-assessment.git
@@ -424,7 +421,6 @@ git clone https://github.com/ShwetaBharambe21/laravel-app-assessment.git
 cd laravel-app-assessment
 ```
 
-<<<<<<< HEAD
 ---
 
 ## Step 2: Create Environment File
@@ -678,7 +674,7 @@ curl localhost
 
 ## GitHub Actions
 
-![GitHub Actions](docs/github-actions.png)
+![GitHub Actions](github-actions.png)
 
 ## Running Application
 
