@@ -79,7 +79,7 @@ This project demonstrates a production-ready Laravel deployment architecture tha
 
 # Architecture Diagram
 
-![Architecture](architecture-diagram.svg)
+![Architecture](architecture-diagram.png)
 
 ---
 
