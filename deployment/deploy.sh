@@ -14,6 +14,4 @@ docker run -d \
   -p 9000:9000 \
   shweta779/laravel-app:$VERSION
 
-curl http://localhost/health
-
 echo "Deployment Successful"

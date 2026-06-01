@@ -1,14 +1,15 @@
 #!/bin/bash
 
-PREVIOUS=$1
+set -e
 
-docker stop laravel-app
+VERSION=$1
 
-docker rm laravel-app
+docker stop laravel-app || true
+docker rm laravel-app || true
 
 docker run -d \
---name laravel-app \
--p 9000:9000 \
-myrepo/laravel-app:$PREVIOUS
+  --name laravel-app \
+  -p 9000:9000 \
+  shweta779/laravel-app:$VERSION
 
-echo "Rollback Complete"
+echo "Rollback Successful"
