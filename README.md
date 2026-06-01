@@ -441,14 +441,9 @@ Updated deployment scripts and workflow configuration until automated deployment
 ---
 
 # Screenshots
-
 ## Application Running
 
-Add screenshot here:
-
-```text
-screenshots/application-running.png
-```
+![Application Running](application-running.png)
 
 ---
 
