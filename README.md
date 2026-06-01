@@ -484,7 +484,6 @@ http://127.0.0.1:8000
 ## Build Docker Image
 =======
 ## Build Container
->>>>>>> 717dc581d9a629a473df26e3380aabf819c4576b
 
 ```bash
 docker build -t laravel-app .
@@ -493,7 +492,6 @@ docker build -t laravel-app .
 ## Run Container
 
 ```bash
-<<<<<<< HEAD
 docker run -d \
 -p 9000:9000 \
 --name laravel-app \
@@ -657,7 +655,7 @@ Updated deployment scripts and workflow configuration until automated deployment
 # Screenshots
 ## Application Running
 
-![Application Running](application-running.png)
+![Application Running](application-running.svg)
 =======
 docker run -d -p 80:80 laravel-app
 ```
@@ -704,8 +702,6 @@ https://github.com/ShwetaBharambe21
 LinkedIn:
 [(https://www.linkedin.com/in/shweta-bharambe/)]
 
-```
-```
 =======
 Shweta Bharambe
 
