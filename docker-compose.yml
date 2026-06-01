@@ -10,8 +10,13 @@ services:
     restart: unless-stopped
     ports:
       - "9000:9000"
+<<<<<<< HEAD
     # volumes:
     #   - .:/var/www/html
+=======
+    volumes:
+      - .:/var/www/html
+>>>>>>> 717dc581d9a629a473df26e3380aabf819c4576b
 
   nginx:
     image: nginx:latest
