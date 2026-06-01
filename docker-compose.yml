@@ -12,9 +12,6 @@ services:
     ports:
       - "9000:9000"
 
-    volumes:
-      - .:/var/www/html
-
     restart: unless-stopped
 
   nginx:
