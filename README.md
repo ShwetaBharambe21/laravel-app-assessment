@@ -79,7 +79,7 @@ This project demonstrates a production-ready Laravel deployment architecture tha
 
 # Architecture Diagram
 
-![Architecture](architecture-diagram.png)
+![Architecture](architecture-diagram.svg)
 
 ---
 
@@ -150,7 +150,6 @@ AWS EC2 Instances
 Health Check
     ↓
 Traffic Switch
->>>>>>> 717dc581d9a629a473df26e3380aabf819c4576b
 ```
 
 ---
@@ -655,7 +654,7 @@ Updated deployment scripts and workflow configuration until automated deployment
 # Screenshots
 ## Application Running
 
-![Application Running](application-running.svg)
+![Application Running](application-running.png)
 =======
 docker run -d -p 80:80 laravel-app
 ```
