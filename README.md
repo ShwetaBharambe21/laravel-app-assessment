@@ -668,17 +668,9 @@ docker run -d -p 80:80 laravel-app
 curl localhost
 ```
 
----
-
-# Screenshots
-
 ## GitHub Actions
 
 ![GitHub Actions](github-actions.png)
-
-## Running Application
-
-![Application](application.png)
 
 ---
 
