@@ -19,22 +19,9 @@ This repository represents a real-world deployment workflow where application co
 
 # Solution Architecture
 
-Developer
-    │
-    ▼
-GitHub Repository
-    │
-    ▼
-GitHub Actions Pipeline
-    │
-    ▼
-AWS EC2 Instance
-    │
-    ▼
-Docker Container
-    │
-    ▼
-Laravel Application
+# Architecture Diagram
+
+![Architecture](architecture-diagram.png)
 
 =======
 Production-grade Laravel deployment on AWS using Docker, EC2 Auto Scaling Group, Application Load Balancer, GitHub Actions CI/CD, and CloudWatch monitoring.
@@ -74,12 +61,6 @@ This project demonstrates a production-ready Laravel deployment architecture tha
 * Zero downtime deployment
 * CloudWatch monitoring
 * Infrastructure as Code
-
----
-
-# Architecture Diagram
-
-![Architecture](architecture-diagram.png)
 
 ---
 
